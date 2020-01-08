@@ -1,1 +1,14 @@
 theme: jekyll-theme-tactile
+
+# urls
+# your gh-pages url: https://username.github.io
+url: https://lorenzonegri.github.io
+# your repository name: /repository
+baseurl: /R-Labs
+
+# defaults (to simplify front matter)
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
