@@ -236,7 +236,7 @@ round(n1/nrow(population),3)
 0.153
 
 
-## <a name="02-id"></a>Select ### [return](#00-id)
+## <a name="02-id"></a>Select ### [🏠](#00-id)
 
 The `ncyflights13` dataset is too wide to fit onto the screen. In all the examples of filtering above we couldn’t even see all of the variables – there were always 12 columns which didn’t fit on the screen. It’d be good if we could make our dataframe a bit narrower, so that we can fit the information we’re interested in (and nothing else) onto the screen. This is what select does – it’s essentially a filter, but for columns rather than rows.
 
