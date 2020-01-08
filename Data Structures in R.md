@@ -1,6 +1,9 @@
 ---
 title: Data Structures 
 nav: true
+output:
+  html_document:
+    df_print: paged
 --- 
 
 # Looking at data structures - dataframes in R
