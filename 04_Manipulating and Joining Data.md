@@ -9,7 +9,7 @@ Using `dplyr`
 
 ## Content:
  - [Filtering subjects based on criteria](#01-id)
- - [elect](#02-id)
+ - [Select](#02-id)
  - [Making new variables](#03-id)
  - [Grouping subjects based on criteria](#04-id)
  - [Producing summary statistics for groups of subjects](#05-id)
