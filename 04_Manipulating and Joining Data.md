@@ -3,7 +3,7 @@ title: Manipulating and Joining Data
 nav: true
 --- 
 
-# <a name="00-id"></a> Manipulating and joining data (#00-id)
+# <a name="00-id"></a> Manipulating and joining data
 
 Using `dplyr`
 
