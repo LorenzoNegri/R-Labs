@@ -1,3 +1,8 @@
+---
+title: Text Mining - Basics 
+nav: true
+--- 
+
 # Text Mining - Exploration
 
 How to deal with variables like: *natural language*.
