@@ -1,3 +1,8 @@
+---
+title: Data Structures 
+nav: true
+--- 
+
 # Looking at data structures - dataframes in R
 
 Dataframes are the fundamental data structure in R. They are essentially tables consisting of variables and observations. If we can represent your dataset as a dataframe, we're ready to start answering questions about it using R.
