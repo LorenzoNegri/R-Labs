@@ -1,3 +1,8 @@
+---
+title: Manipulating and Joining Data 
+nav: true
+--- 
+
 # Manipulating and joining data
 
 Using `dplyr`
