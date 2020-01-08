@@ -1,3 +1,8 @@
+---
+title: Visualising Relationships
+nav: true
+--- 
+
 # Visualising relationships - ggplot2
 
 In this section, I'll look at one of the most basic tools for visualising relationships between continuous variables - the scatter plot. 
