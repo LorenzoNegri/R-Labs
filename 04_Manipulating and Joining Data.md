@@ -7,17 +7,15 @@ nav: true
 
 Using `dplyr`
 
-<h2>Table of content</h2>
-<ul>
-    <li><a href="#ref1">Filtering subjects based on criteria</a></li>
-    <li><a href="#ref2">Select</a></li>
-    <li><a href="#ref3">Making new variables</a></li>
-    <li><a href="#ref4">Grouping subjects based on criteria</a></li>
-    <li><a href="#re5">Producing summary statistics for groups of subjects</a></li>
-    <li><a href="#re6">Putting together multiple dataframes with common subjectsv
-</ul>
+## Content:
+ - [Filtering subjects based on criteria](#01-id)
+ - [elect](#02-id)
+ - [Making new variables](#03-id)
+ - [Grouping subjects based on criteria](#04-id)
+ - [Producing summary statistics for groups of subjects](#05-id)
+ - [Putting together multiple dataframes with common subjects](#06-id)
 
-## Filtering subjects based on criteria
+## <a name="01-id"></a> Filtering subjects based on criteria
 
 
 ```R
@@ -238,7 +236,7 @@ round(n1/nrow(population),3)
 0.153
 
 
-## Select
+## <a name="02-id"></a>Select
 
 The `ncyflights13` dataset is too wide to fit onto the screen. In all the examples of filtering above we couldn’t even see all of the variables – there were always 12 columns which didn’t fit on the screen. It’d be good if we could make our dataframe a bit narrower, so that we can fit the information we’re interested in (and nothing else) onto the screen. This is what select does – it’s essentially a filter, but for columns rather than rows.
 
@@ -335,7 +333,7 @@ print(select_if(flights, is.double))
     #   tz [3m[90m<dbl>[90m[23m[39m
     
 
-## Making new variables
+## <a name="03-id"></a>Making new variables
 
 What if we wanted to add new columns, in the dataset `flights`? 
 
@@ -368,7 +366,7 @@ print(flights %>% mutate(delay = dep_time - sched_dep_time))
 
 If we want to add the calculated column into the dataset:
 flights <- flights %>% mutate(delay = dep_time - sched_dep_time)
-## Grouping subjects based on criteria
+## <a name="04-id"></a>Grouping subjects based on criteria
 
 We can now do something quite powerful like clump variables together into groups, and then summarise these groups.
 
@@ -409,7 +407,7 @@ About `group_by`:
 - We can ungroup a grouped dataframe using, `ungroup()`. That'll be handy in the next section.
 
 
-## Producing summary statistics for groups of subjects
+## <a name="05-id"></a>Producing summary statistics for groups of subjects
 
 To test the hypothesis about flight delays in winter, I will need to create a summary statistic about delays for each month. We can do it by calculating the mean flight departure delay for each calendar month like this:
 
@@ -485,7 +483,7 @@ The `num_flights = n()` bit produces a second summary statistic for each group, 
 
 It looks like there's some relationship between number of flights and delays, but it's not particularly strong. Again, some more investigation is needed.
 
-## Putting together multiple dataframes with common subjects
+## <a name="06-id"></a>Putting together multiple dataframes with common subjects
 
 Now let's look at the dataframe `airlines` in the `nycflights13` package:
 
@@ -631,8 +629,3 @@ print(flights %>% select(year, month, day, carrier, origin, name.y))
     [90m10[39m  [4m2[24m013     1     1 AA      LGA    La Guardia         
     [90m# ... with 336,766 more rows[39m
     
-
-
-```R
-
-```
