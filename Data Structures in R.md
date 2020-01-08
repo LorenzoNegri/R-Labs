@@ -13,7 +13,7 @@ Dataframes are the fundamental data structure in R. They are essentially tables 
 Let's load `mpg` dataframe contained in the `tidyverse` package:
 
 
-```{r}
+```R
 library(tidyverse)
 head(mpg) # visualize first lines of dataframe
 cat("\n Number of rows of dataframe | Number of feautures:\n", dim(mpg),"\n"); cat("\n")
