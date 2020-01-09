@@ -1,6 +1,11 @@
 ---
 title: Data Structures 
 nav: true
+output:
+  html_document:
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
 --- 
 
 # Looking at data structures - dataframes in R
