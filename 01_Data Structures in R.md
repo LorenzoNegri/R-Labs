@@ -18,17 +18,14 @@ summary(mpg) # visualize descriptive stats of dataframe
 ```
 
 
-<!-- html table generated in R 3.6.1 by xtable 1.8-4 package -->
-<!-- Thu Jan 09 19:43:39 2020 -->
-<table border=1>
-<tr> <th>  </th> <th> manufacturer </th> <th> model </th> <th> displ </th> <th> year </th> <th> cyl </th> <th> trans </th> <th> drv </th> <th> cty </th> <th> hwy </th> <th> fl </th> <th> class </th>  </tr>
-  <tr> <td align="right"> 1 </td> <td> audi </td> <td> a4 </td> <td align="right"> 1.80 </td> <td align="right"> 1999 </td> <td align="right">   4 </td> <td> auto(l5) </td> <td> f </td> <td align="right">  18 </td> <td align="right">  29 </td> <td> p </td> <td> compact </td> </tr>
-  <tr> <td align="right"> 2 </td> <td> audi </td> <td> a4 </td> <td align="right"> 1.80 </td> <td align="right"> 1999 </td> <td align="right">   4 </td> <td> manual(m5) </td> <td> f </td> <td align="right">  21 </td> <td align="right">  29 </td> <td> p </td> <td> compact </td> </tr>
-  <tr> <td align="right"> 3 </td> <td> audi </td> <td> a4 </td> <td align="right"> 2.00 </td> <td align="right"> 2008 </td> <td align="right">   4 </td> <td> manual(m6) </td> <td> f </td> <td align="right">  20 </td> <td align="right">  31 </td> <td> p </td> <td> compact </td> </tr>
-  <tr> <td align="right"> 4 </td> <td> audi </td> <td> a4 </td> <td align="right"> 2.00 </td> <td align="right"> 2008 </td> <td align="right">   4 </td> <td> auto(av) </td> <td> f </td> <td align="right">  21 </td> <td align="right">  30 </td> <td> p </td> <td> compact </td> </tr>
-  <tr> <td align="right"> 5 </td> <td> audi </td> <td> a4 </td> <td align="right"> 2.80 </td> <td align="right"> 1999 </td> <td align="right">   6 </td> <td> auto(l5) </td> <td> f </td> <td align="right">  16 </td> <td align="right">  26 </td> <td> p </td> <td> compact </td> </tr>
-  <tr> <td align="right"> 6 </td> <td> audi </td> <td> a4 </td> <td align="right"> 2.80 </td> <td align="right"> 1999 </td> <td align="right">   6 </td> <td> manual(m5) </td> <td> f </td> <td align="right">  18 </td> <td align="right">  26 </td> <td> p </td> <td> compact </td> </tr>
-   </table>
+||manufacturer|model|displ|year|cyl|trans|drv|cty|hwy|fl|class|
+|--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
+|1|audi|a4|1.80|1999|4|auto(l5)|f|18|29|p|compact|
+|2|audi|a4|1.80|1999|4|manual(m5)|f|21|29|p|compact|
+|3|audi|a4|2.00|2008|4|manual(m6)|f|20|31|p|compact|
+|4|audi|a4|2.00|2008|4|auto(av)|f|21|30|p|compact|
+|5|audi|a4|2.80|1999|6|auto(l5)|f|16|26|p|compact|
+|6|audi|a4|2.80|1999|6|manual(m5)|f|18|26|p|compact|
 
 
 
