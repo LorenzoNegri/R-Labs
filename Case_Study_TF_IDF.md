@@ -1,6 +1,6 @@
 ---
-title: Case Study; Inverse Document Frequency (TF-IDF)
-nav: true
+title: Inverse Document Frequency (TF-IDF)
+cas: true
 --- 
 
 
