@@ -1,3 +1,9 @@
+---
+title: Case Study: Inverse Document Frequency (TF-IDF)
+nav: true
+--- 
+
+
 # Term Frequency - Inverse Document Frequency (TF-IDF): Mathematics and R code
 
 Case studies of text analysis, and I'll look at some common transformations we can make on these types of datasets. One issue with text data that we came across is that datasets like novels contain a lot of common "stop words" which don't carry much information, eg. "the", "and", "of", etc. We'd like to transform text data to emphasise the words which carry meaning, and even better, the words which help us distinguish between documents.
