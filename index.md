@@ -10,7 +10,7 @@ This is a collection of R laboratories and case studies of my continuous improvi
 ## Case Study:
 
 {% for case in site.pages %}
-{% if case.cas == true %}- [{{ topic.title }}]({{ topic.url | absolute_url }}){% endif %}
+{% if case.cas == true %}- [{{ case.title }}]({{ case.url | absolute_url }}){% endif %}
 {% endfor %}
 </div>
 
