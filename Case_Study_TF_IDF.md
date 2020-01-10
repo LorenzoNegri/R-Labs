@@ -11,13 +11,13 @@ Case studies of text analysis, and I'll look at some common transformations we c
 One common transformation to do this is called ***term frequency** - inverse document frequency (TF-IDF)*, and it works like this. For a given word or term t in a set of documents:
 
 
-<div style="text-align:center">![formula](https://render.githubusercontent.com/render/math?math=TF=\frac{Nt}{Tt})</div>
+<div style="text-align:center"><img src=https://render.githubusercontent.com/render/math?math=TF=\frac{Nt}{Tt}></div>
 
 
 Where **Nt = Number of instances of *t* in document**, **Tt = Total number of terms in document**
 
 
-<div style="text-align:center">![formula](https://render.githubusercontent.com/render/math?math=IDF=log(\frac{Td}{Dt})</div>
+<div style="text-align:center"><img src=https://render.githubusercontent.com/render/math?math=IDF=log(\frac{Td}{Dt}></div>
   
 
 Where **Td = Total number of documents**, **Tt = Number of documents in which *t* appears**
