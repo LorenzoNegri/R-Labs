@@ -17,7 +17,7 @@ One common transformation to do this is called ***term frequency** - inverse doc
 Where **Nt = Number of instances of *t* in document**, **Tt = Total number of terms in document**
 
 
-![png](https://render.githubusercontent.com/render/math?math=IDF=log(\frac{Td}{Dt})
+![png](https://render.githubusercontent.com/render/math?math=IDF=log(\frac{Td}{Dt}))
   
 
 Where **Td = Total number of documents**, **Tt = Number of documents in which *t* appears**
