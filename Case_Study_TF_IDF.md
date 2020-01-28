@@ -43,8 +43,8 @@ Now we need now to break the text into individual tokens (a process called token
 physics_words <- physics %>%
   #tokenization with tidytext library 
   unnest_tokens(word, text) %>%
-  count(author, word, sort = TRUE) %>%
-  ungroup()
+  #counting words 
+  count(author, word, sort = TRUE)
 
 print(physics_words)
 ```
@@ -69,18 +69,25 @@ print(physics_words)
 
     
 
-These famous scientists write "the" and "of" a lot. This is not very informative. Let's transform the data using **TF-IDF** and visualise the new top words using this weighting. We remove a curated list of stop words like "fig" for "figure", and "eq" for "equation", which appear in some of the books first:
+As you can see we have a lot of "*the*" and "*of*". This is not very informative. We have to transform the data using **TF-IDF** method and visualise the new top words using this weighting procedure with `bind_tf_idf`. Let's also remove a list of stop words like "*fig*" for "figure", and "*eq*" for "equation" and other similar things which appear a lot in these books and remove them using `anti_join()` to find unmatched records:
 
 
 ```R
 physics_words <- physics_words %>%
+  #Bind the term frequency and inverse document frequency to the dataset
   bind_tf_idf(word, author, n) 
 
+#creating personalized stopwords
 mystopwords <- tibble(word = c("eq", "co", "rc", "ac", "ak", "bn", 
                                    "fig", "file", "cg", "cb", "cm"))
 
+#cleaning our data from the stopwords
 physics_words <- anti_join(physics_words, mystopwords, by = "word")
+```
 
+Now we can plot reults:
+
+```R
 plot_physics <- physics_words %>%
   arrange(desc(tf_idf)) %>%
   mutate(word = factor(word, levels = rev(unique(word)))) %>%
@@ -103,11 +110,11 @@ ggplot(plot_physics, aes(word, tf_idf, fill = author)) +
 ![png](output_7_0.png)
 
 
-This reveals that:
+We can now make some conclusion about data:
 
-  -  Galileo wrote more about "water" and "gravity"
+  -  Galileo wrote more on "water" and "gravity"
   -  Huygens was most concerned with "refraction"
-  -  Tesla was most concerned with electricity ("bulb", "coil", "wire")
-  -  Einstein, of course, was concerned with "relativity".
+  -  Tesla was most interested with electricity ("bulb", "coil", "wire")
+  -  Einstein, of course, was always thinking about "relativity".
 
-That's a nice little potted history of a few hundred years of progress in physics, and all revealed algorithmically from the writings of the people themselves.
+This is a nice way to play with some text mining methods.
