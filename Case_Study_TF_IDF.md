@@ -4,9 +4,9 @@ cas: true
 --- 
 
 
-# Term Frequency - Inverse Document Frequency (TF-IDF): Mathematics and R code
+# Term Frequency - Inverse Document Frequency (TF-IDF): Text Mining with R code
 
-Text analysis of frequent words wrote by famous mathematicians. I'll look at some common transformations we can make on these types of datasets. "stop words" has to be taken into account. We'd like to transform text data to emphasise the words which carry meaning, and the words which help us distinguish between them.
+Text analysis of frequent words wrote by famous mathematicians/physics. I'll look at some common transformations we can make on these types of datasets. "stop words" has to be taken into account. We'd like to transform text data to emphasise the words which carry meaning, and the words which help us distinguish between them.
 
 One common transformation to do this is called ***term frequency** - inverse document frequency (TF-IDF)*. For a given word or term t in a set of documents we can apply this formula:
 
