@@ -85,7 +85,7 @@ mystopwords <- tibble(word = c("eq", "co", "rc", "ac", "ak", "bn",
 physics_words <- anti_join(physics_words, mystopwords, by = "word")
 ```
 
-Now we can plot reults:
+Now we can plot results:
 
 ```R
 plot_physics <- physics_words %>%
