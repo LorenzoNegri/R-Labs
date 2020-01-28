@@ -6,9 +6,9 @@ cas: true
 
 # Term Frequency - Inverse Document Frequency (TF-IDF): Mathematics and R code
 
-Case studies of text analysis, and I'll look at some common transformations we can make on these types of datasets. One issue with text data that we came across is that datasets like novels contain a lot of common "stop words" which don't carry much information, eg. "the", "and", "of", etc. We'd like to transform text data to emphasise the words which carry meaning, and even better, the words which help us distinguish between documents.
+Text analysis of frequent words wrote by famous mathematicians. I'll look at some common transformations we can make on these types of datasets. "stop words" has to be taken into account. We'd like to transform text data to emphasise the words which carry meaning, and the words which help us distinguish between them.
 
-One common transformation to do this is called ***term frequency** - inverse document frequency (TF-IDF)*, and it works like this. For a given word or term t in a set of documents:
+One common transformation to do this is called ***term frequency** - inverse document frequency (TF-IDF)*. For a given word or term t in a set of documents we can apply this formula:
 
 
 ![png](https://render.githubusercontent.com/render/math?math=TF=\frac{Nt}{Tt})
@@ -22,18 +22,26 @@ Where **Nt = Number of instances of *t* in document**, **Tt = Total number of te
 
 Where **Td = Total number of documents**, **Tt = Number of documents in which *t* appears**
 
-And then the **TF-IDF** transformation for t is the product of these two, $TF(t)×IDF(t)$. Each word now has a weight, based on how it appears across all documents. The beauty of this is that while TF gives higher weight to common words, IDF weights words which only occur in the few documents, so the product emphasises words which are distinguished between documents. Let's see it in action.
+And then the *TF-IDF* transformation for t (the product of these two, **TF(t)×IDF(t)**). Each word now has a weight, based on how it appears across all documents. While *TF* gives higher weight to common words, *IDF* weights words which only occur in fewer documents, so the product emphasises words which are distinguished between all documents.
 
-We're going to look at the words which distinguish between different eras in the history of physics. First, we'll need to download books by some physicists from Project Gutenberg:
+First, we'll need to download books by some physicists from Project Gutenberg by utilizing the author ID (this *ID* can be found looking up the end of link to the author page on Project Gutenberg website):
 
 
 ```R
 library(tidyverse)
 library(gutenbergr)
 library(tidytext)
+
+#using gutenbergr library to access data
 physics <- gutenberg_download(c(37729, 14725, 13476, 30155), 
                               meta_fields = "author")
+```
+Now we need now to break the text into individual tokens (a process called tokenization) and transform it to a tidy data structure. To do this, we use tidytext’s ```unnest_tokens()``` function. 
+
+```R
+#gathering words
 physics_words <- physics %>%
+  #tokenization with tidytext library 
   unnest_tokens(word, text) %>%
   count(author, word, sort = TRUE) %>%
   ungroup()
