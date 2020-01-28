@@ -41,20 +41,24 @@ physics_words <- physics %>%
 print(physics_words)
 ```
 
-    [90m# A tibble: 12,671 x 3[39m
-       author              word      n
-       [3m[90m<chr>[39m[23m               [3m[90m<chr>[39m[23m [3m[90m<int>[39m[23m
-    [90m 1[39m Galilei, Galileo    the    [4m3[24m760
-    [90m 2[39m Tesla, Nikola       the    [4m3[24m604
-    [90m 3[39m Huygens, Christiaan the    [4m3[24m553
-    [90m 4[39m Einstein, Albert    the    [4m2[24m993
-    [90m 5[39m Galilei, Galileo    of     [4m2[24m049
-    [90m 6[39m Einstein, Albert    of     [4m2[24m028
-    [90m 7[39m Tesla, Nikola       of     [4m1[24m737
-    [90m 8[39m Huygens, Christiaan of     [4m1[24m708
-    [90m 9[39m Huygens, Christiaan to     [4m1[24m207
-    [90m10[39m Tesla, Nikola       a      [4m1[24m176
-    [90m# ... with 12,661 more rows[39m
+
+```
+# A tibble: 12,671 x 3
+   author              word      n
+   <chr>               <chr> <int>
+ 1 Galilei, Galileo    the    3760
+ 2 Tesla, Nikola       the    3604
+ 3 Huygens, Christiaan the    3553
+ 4 Einstein, Albert    the    2993
+ 5 Galilei, Galileo    of     2049
+ 6 Einstein, Albert    of     2028
+ 7 Tesla, Nikola       of     1737
+ 8 Huygens, Christiaan of     1708
+ 9 Huygens, Christiaan to     1207
+10 Tesla, Nikola       a      1176
+# ... with 12,661 more rows
+```
+
     
 
 These famous scientists write "the" and "of" a lot. This is not very informative. Let's transform the data using **TF-IDF** and visualise the new top words using this weighting. We remove a curated list of stop words like "fig" for "figure", and "eq" for "equation", which appear in some of the books first:
