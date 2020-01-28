@@ -2,7 +2,7 @@
 
 ## Getting the dataframe right
 
-We're going to analyse some very messy datasets - books - and visualise the relationships between them.
+We're going to analyse a text book and visualise some counting of words.
 
 
 ```R
@@ -23,7 +23,7 @@ tidy_books <- original_books %>%
 ```
 
 
-Now, if we want to count the number of instances of each word, we can use the count function in the dplyr package.
+Now, if we want to count the number of instances of each word, we can use the `count()` function in the dplyr package.
 
 
 ```R
@@ -34,82 +34,22 @@ tidy_books %>%
   count(word, sort = TRUE)
 ```
 
-    Joining, by = "word"
-    
-
-
-<table>
-<caption>A tibble: 13914 × 2</caption>
-<thead>
-	<tr><th scope=col>word</th><th scope=col>n</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>miss     </td><td>1855</td></tr>
-	<tr><td>time     </td><td>1337</td></tr>
-	<tr><td>fanny    </td><td> 862</td></tr>
-	<tr><td>dear     </td><td> 822</td></tr>
-	<tr><td>lady     </td><td> 817</td></tr>
-	<tr><td>sir      </td><td> 806</td></tr>
-	<tr><td>day      </td><td> 797</td></tr>
-	<tr><td>emma     </td><td> 787</td></tr>
-	<tr><td>sister   </td><td> 727</td></tr>
-	<tr><td>house    </td><td> 699</td></tr>
-	<tr><td>elizabeth</td><td> 687</td></tr>
-	<tr><td>elinor   </td><td> 623</td></tr>
-	<tr><td>hope     </td><td> 601</td></tr>
-	<tr><td>friend   </td><td> 593</td></tr>
-	<tr><td>family   </td><td> 578</td></tr>
-	<tr><td>mind     </td><td> 563</td></tr>
-	<tr><td>father   </td><td> 558</td></tr>
-	<tr><td>home     </td><td> 550</td></tr>
-	<tr><td>jane     </td><td> 550</td></tr>
-	<tr><td>mother   </td><td> 541</td></tr>
-	<tr><td>catherine</td><td> 539</td></tr>
-	<tr><td>feelings </td><td> 535</td></tr>
-	<tr><td>happy    </td><td> 534</td></tr>
-	<tr><td>moment   </td><td> 515</td></tr>
-	<tr><td>half     </td><td> 501</td></tr>
-	<tr><td>love     </td><td> 495</td></tr>
-	<tr><td>till     </td><td> 495</td></tr>
-	<tr><td>crawford </td><td> 493</td></tr>
-	<tr><td>marianne </td><td> 492</td></tr>
-	<tr><td>heart    </td><td> 470</td></tr>
-	<tr><td>...</td><td>...</td></tr>
-	<tr><td>xxi       </td><td>1</td></tr>
-	<tr><td>xxii      </td><td>1</td></tr>
-	<tr><td>xxiii     </td><td>1</td></tr>
-	<tr><td>xxiv      </td><td>1</td></tr>
-	<tr><td>xxix      </td><td>1</td></tr>
-	<tr><td>xxv       </td><td>1</td></tr>
-	<tr><td>xxvi      </td><td>1</td></tr>
-	<tr><td>xxvii     </td><td>1</td></tr>
-	<tr><td>xxviii    </td><td>1</td></tr>
-	<tr><td>xxx       </td><td>1</td></tr>
-	<tr><td>xxxi      </td><td>1</td></tr>
-	<tr><td>xxxii     </td><td>1</td></tr>
-	<tr><td>xxxiii    </td><td>1</td></tr>
-	<tr><td>xxxiv     </td><td>1</td></tr>
-	<tr><td>xxxix     </td><td>1</td></tr>
-	<tr><td>xxxv      </td><td>1</td></tr>
-	<tr><td>xxxvi     </td><td>1</td></tr>
-	<tr><td>xxxvii    </td><td>1</td></tr>
-	<tr><td>xxxviii   </td><td>1</td></tr>
-	<tr><td>yawned    </td><td>1</td></tr>
-	<tr><td>yawning   </td><td>1</td></tr>
-	<tr><td>yawns     </td><td>1</td></tr>
-	<tr><td>year's    </td><td>1</td></tr>
-	<tr><td>yeomanry  </td><td>1</td></tr>
-	<tr><td>yeomen    </td><td>1</td></tr>
-	<tr><td>yestermorn</td><td>1</td></tr>
-	<tr><td>younker   </td><td>1</td></tr>
-	<tr><td>your's    </td><td>1</td></tr>
-	<tr><td>youths    </td><td>1</td></tr>
-	<tr><td>zigzags   </td><td>1</td></tr>
-</tbody>
-</table>
-
-
+```    
+# A tibble: 13,914 x 2
+   word       n
+   <chr>  <int>
+ 1 miss    1855
+ 2 time    1337
+ 3 fanny    862
+ 4 dear     822
+ 5 lady     817
+ 6 sir      806
+ 7 day      797
+ 8 emma     787
+ 9 sister   727
+10 house    699
+# ... with 13,904 more rows
+```
 
 Make a plot by piping directly to `ggplot`:
 
@@ -134,6 +74,3 @@ tidy_books %>%
 
 
 
-```R
-
-```
