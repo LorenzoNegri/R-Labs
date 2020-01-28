@@ -3,7 +3,7 @@ title: Jane Austen novels Text Mining
 cas: true
 --- 
 
-#  Case Study: Jane_Austen_novels_text_mining_R
+#  Case Study: Jane Austen novels text mining with R
 
 ## Getting the dataframe right
 
